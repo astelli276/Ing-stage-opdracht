@@ -1,4 +1,4 @@
 package com.ing.zoo.behaviour;
 
-public class TrickPerformer {
+public interface Eating {
 }
