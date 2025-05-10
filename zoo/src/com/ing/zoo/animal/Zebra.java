@@ -1,26 +1,18 @@
 package com.ing.zoo.animal;
 
-import java.util.Random;
+import com.ing.zoo.behaviour.EatLeaves;
+import com.ing.zoo.behaviour.NoTrick;
 
-public class Zebra {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
 
-    public Zebra()
-    {
+public class Zebra extends Animal {
+    public Zebra(String name) {
+        super(name);
+        this.eating = new EatLeaves();
+        this.performTrick = new NoTrick();
     }
 
-    public void sayHello()
-    {
-        helloText = "zebra zebra";
-        System.out.println(helloText);
-    }
-
-    public void eatLeaves()
-    {
-        eatText = "munch munch zank yee bra";
-        System.out.println(eatText);
+    @Override
+    protected String getHelloText() {
+        return "zebra zebra";
     }
 }

@@ -1,41 +1,18 @@
 package com.ing.zoo.animal;
 
-import java.util.Random;
+import com.ing.zoo.behaviour.EatMeat;
+import com.ing.zoo.behaviour.PerformTrick;
+import com.ing.zoo.behaviour.RandomTrick;
 
-public class Tiger {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+public class Tiger extends Animal {
 
-    public Tiger()
-    {
+    public Tiger(String name){
+        super(name);
+        this.eating = new EatMeat();
+        this.performTrick = new RandomTrick("jumps in tree", "scratches ears");
     }
-
-    public void sayHello()
-    {
-        helloText = "rraaarww";
-        System.out.println(helloText);
-    }
-
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
-    }
-
-    public void performTrick()
-    {
-        Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "jumps in tree";
-        }
-        else
-        {
-            trick = "scratches ears";
-        }
-        System.out.println(trick);
+    @Override
+    protected String getHelloText() {
+        return "rraaarww";
     }
 }

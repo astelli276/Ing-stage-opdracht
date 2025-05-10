@@ -1,4 +1,34 @@
 package com.ing.zoo.animal;
 
-public class animal {
+import com.ing.zoo.behaviour.Eating;
+import com.ing.zoo.behaviour.PerformTrick;
+
+public abstract class Animal {
+    String name;
+    protected Eating eating;
+    protected PerformTrick performTrick;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void sayHello() {
+        System.out.println(getHelloText());
+    }
+
+    protected abstract String getHelloText();
+
+    public void eat() {
+        if (eating != null)
+            eating.eat();
+    }
+
+    public void performTrick() {
+        if (performTrick != null)
+            performTrick.performTrick();
+    }
 }

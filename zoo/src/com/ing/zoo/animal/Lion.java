@@ -1,23 +1,17 @@
 package com.ing.zoo.animal;
 
-public class Lion {
-    public String name;
-    public String helloText;
-    public String eatText;
+import com.ing.zoo.behaviour.EatMeat;
+import com.ing.zoo.behaviour.NoTrick;
 
-    public Lion()
-    {
+public class Lion extends Animal {
+    public Lion(String name) {
+        super(name);
+        this.eating = new EatMeat();
+        this.performTrick = new NoTrick();
     }
 
-    public void sayHello()
-    {
-        helloText = "roooaoaaaaar";
-        System.out.println(helloText);
-    }
-
-    public void eatMeat()
-    {
-        eatText = "nomnomnom thx mate";
-        System.out.println(eatText);
+    @Override
+    protected String getHelloText() {
+        return "roooaoaaaaar";
     }
 }

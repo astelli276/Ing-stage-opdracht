@@ -1,23 +1,18 @@
 package com.ing.zoo.animal;
 
-public class Hippo {
-    public String name;
-    public String helloText;
-    public String eatText;
+import com.ing.zoo.behaviour.EatLeaves;
+import com.ing.zoo.behaviour.NoTrick;
 
-    public Hippo()
-    {
+public class Hippo extends Animal{
+
+    public Hippo(String name){
+        super(name);
+        this.eating = new EatLeaves();
+        this.performTrick = new NoTrick();
     }
 
-    public void sayHello()
-    {
-        helloText = "splash";
-        System.out.println(helloText);
-    }
-
-    public void eatLeaves()
-    {
-        eatText = "munch munch lovely";
-        System.out.println(eatText);
+    @Override
+    protected String getHelloText() {
+        return "splash";
     }
 }
