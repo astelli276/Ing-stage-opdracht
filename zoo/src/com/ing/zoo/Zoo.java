@@ -20,8 +20,10 @@ public class Zoo {
         Pig dora = new Pig("dora");
         Tiger wally = new Tiger("wally");
         Zebra marty = new Zebra("marty");
+        Bear baloo = new Bear("baloo");
+        Penguin gunter = new Penguin("gunter");
 
-        List<Animal> animals = Arrays.asList(henk, elsa, dora, wally, marty);
+        List<Animal> animals = Arrays.asList(henk, elsa, dora, wally, marty, baloo, gunter);
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
