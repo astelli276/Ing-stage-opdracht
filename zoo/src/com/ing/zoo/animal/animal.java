@@ -24,7 +24,7 @@ public abstract class Animal {
     }
 
     public void sayHello() {
-        System.out.println(getHelloText());
+        System.out.println(name + ": " + getHelloText());
     }
 
     protected abstract String getHelloText();
