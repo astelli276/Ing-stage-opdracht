@@ -1,5 +1,5 @@
 package com.ing.zoo.behaviour;
 
 public interface PerformTrick {
-    void performTrick();
+    void performTrick(String animalName);
 }

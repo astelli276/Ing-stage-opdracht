@@ -31,11 +31,11 @@ public abstract class Animal {
 
     public void eat() {
         if (eating != null)
-            eating.eat();
+            eating.eat(name);
     }
 
     public void performTrick() {
         if (performTrick != null)
-            performTrick.performTrick();
+            performTrick.performTrick(name);
     }
 }

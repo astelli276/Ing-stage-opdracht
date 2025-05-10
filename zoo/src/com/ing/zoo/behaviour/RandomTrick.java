@@ -12,8 +12,8 @@ public class RandomTrick implements PerformTrick {
     }
 
     @Override
-    public void performTrick() {
+    public void performTrick(String animalName) {
         int index = random.nextInt(tricks.length);
-        System.out.println(tricks[index]);
+        System.out.println(animalName + ": " + tricks[index]);
     }
 }
