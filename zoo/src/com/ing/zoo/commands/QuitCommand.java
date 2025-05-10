@@ -7,7 +7,7 @@ import java.util.List;
 public class QuitCommand implements GiveCommand {
     @Override
     public void execute(List<Animal> animals, String argument) {
-        System.out.println("Zoo application closing... Bye!");
+        System.out.println("Zoo is closing... Good bye!");
         System.exit(0);
     }
 }

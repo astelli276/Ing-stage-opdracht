@@ -13,7 +13,7 @@ public class Zoo {
         commandMap.put("give meat", new EatmeatCommand());
         commandMap.put("give leaves", new EatLeavesCommand());
         commandMap.put("perform trick", new PerformTrickCommand());
-        commandMap.put("quit", new QuitCommand());
+        commandMap.put("exit", new QuitCommand());
 
         Lion henk = new Lion("henk");
         Hippo elsa = new Hippo("elsa");
