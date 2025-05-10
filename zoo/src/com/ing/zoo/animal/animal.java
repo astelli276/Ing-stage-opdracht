@@ -15,6 +15,13 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+    public Eating getEatingBehaviour() {
+        return eating;
+    }
+
+    public PerformTrick getTrickBehaviour() {
+        return performTrick;
+    }
 
     public void sayHello() {
         System.out.println(getHelloText());
